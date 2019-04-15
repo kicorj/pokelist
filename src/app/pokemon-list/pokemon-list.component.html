@@ -1,0 +1,32 @@
+<div class="container custom-container-2">
+  <div *ngIf="Pokemon.length !== 0">
+    <h1 class="mb-3 text-center">Lista de Pokemons</h1>
+    <div class="col-12 justify-content-center">
+      <ngb-pagination [collectionSize]="Pokemon.count"
+      [pageSize]="20"
+      [maxSize]="20"
+      (pageChange)="loadPokemons($event, 20)"
+      ></ngb-pagination>
+    </div>
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Pokemon</th>
+            <th scope="col">Imagem</th>
+            <th scope="col">Favoritar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pokemon of Pokemon.results">
+            <td>{{pokemon.name}}</td>
+            <td><img *ngIf="pokemon.sprites" [src]="pokemon.sprites.front_default"></td>
+            <td>
+                <fa-icon [icon]="isFavorite(pokemon.name)? ['fas','heart'] : ['far','heart']" (click)="addToFavorites(pokemon.name)"></fa-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

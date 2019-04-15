@@ -1,0 +1,9 @@
+h1 {
+  color: #ffde00;
+  text-shadow: -1px 0 #3b4cca, 0 1px #3b4cca, 1px 0 #3b4cca, 0 -1px #3b4cca;
+  text-shadow:
+}
+
+.d-flex {
+  background-color: #3b4cca;
+}

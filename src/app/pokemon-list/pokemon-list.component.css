@@ -1,0 +1,29 @@
+.table {
+  font-size: 24px;
+  text-align: center;
+}
+.table thead th {
+  background-color: #3b4cca;
+  color: #ffde00;
+}
+
+h1 {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.pagination .page-item .page-link {
+  border-radius: 0 !important;
+}
+
+.pagination .page-link {
+  border-top-style: none !important;
+  border-bottom-style: none !important;
+  background-color: #f6f6f6 !important;
+  color: black !important;
+}
+
+.justify-content-center {
+  display: flex !important;
+  justify-content: center !important;
+}
